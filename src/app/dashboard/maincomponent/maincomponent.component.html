@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="head-part">
+    <div class="search-bar">
+      <app-input [value]="searchinformation"
+                 [placeholder]="'Search here...'"
+                 [type]="'text'"
+                 [search]="true"
+                 (searchEvent)="onSearch($event)">
+      </app-input>
+    </div>
+    <div class="profile-data">
+      <!-- Parent Component HTML -->
+      <app-dropdown [options]="countryOptions"
+                    [(selectedValue)]="selectedCountry"
+                    [disabled]="isDropdownDisabled">
+      </app-dropdown>
+
+    </div>
+  </div>
+  <div class="information-widgetone">
+    <!--sales and profit-->
+    <app-widgetone></app-widgetone>
+    <!--charts-->
+    <app-widgettwo></app-widgettwo>
+    <app-widgetthree></app-widgetthree>
+    <app-widgetfour></app-widgetfour>
+    <app-widgetfive></app-widgetfive>
+    <app-widgetsix></app-widgetsix>
+    <app-footer></app-footer>
+  </div>
+</div>
+
